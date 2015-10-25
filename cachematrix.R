@@ -2,11 +2,21 @@
 ## functions do
 
 ## Write a short comment describing this function
-#Test Commit 123
 
 makeCacheMatrix <- function(x = matrix()) {
-
+  m <- NULL
+  set <- function(y) {
+    x <<- y
+    m <<- NULL
+  }
+  get <- function() x
+  setmean <- function(mean) m <<- mean
+  getmean <- function() m
+  list(set = set, get = get,
+       setmean = setmean,
+       getmean = getmean)
 }
+
 
 
 ## Write a short comment describing this function
